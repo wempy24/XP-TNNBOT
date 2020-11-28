@@ -630,6 +630,20 @@ conn.sendMessage(id, 'kirim .foto cewek/cowok\n\nContoh: .foto cewek' ,MessageTy
       }
 
    }
+      if (is == '.anime')
+      {
+
+         fetch('https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/anime/' + args[0] + '.txt')
+            .then(res => res.text())
+            .then(body =>
+            {
+               let randomnime = body.split('\n')
+               let randomnimex = randomnime[Math.floor(Math.random() * randomnime.length)]
+               conn.sendMessage(id, randomnimex, MessageType.text)
+            });
+      }
+
+   }
    if (text.includes(".covid"))
    {
 const get = require('got')
