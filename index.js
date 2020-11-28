@@ -140,9 +140,9 @@ else if (text == 'Asu'){
 conn.sendMessage(id, 'Lu Asw' ,MessageType.text);
 }
 else if (text == '.owner'){
-conn.sendMessage(id, 'Owner XP-TN wa.me/+6285722553839' ,MessageType.text);
+conn.sendMessage(id, 'Owner XP-TN wa.me/+6289655478810' ,MessageType.text);
 }
-else if (text == 'Aris'){
+else if (text == 'Agung'){
 conn.sendMessage(id, 'Aku BOT nya XP-TN' ,MessageType.text);
 }
 else if (text == 'Ngentod'){
@@ -775,13 +775,10 @@ if (text.includes(".pokemon"))
       conn.sendMessage(id,
             `
       Arti dari namamu adalah
-
 🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣
-
          Nama _*${nama}*_ ${h}
          
 🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥
-
 `,
  MessageType.text);
   });
@@ -805,15 +802,9 @@ if (text.includes(".pokemon"))
         var d = h.replace("&amp;", '&')
       console.log(""+ d);
       conn.sendMessage(id, `
-
 🐼🐼🐼🐼🐼🐼🐼🐼🐼
-
  *Kecocokan berdasarkan nama*
-
-
  ${d}
-
-
 🐼🐼🐼🐼🐼🐼🐼🐼🐼
     `, MessageType.text);
   });
@@ -915,6 +906,20 @@ if (text.includes(".lirik")){
 	 	let hasil = `🎶lirik🎶 lagu ${teks} \n\n\n ${res.data.result.lirik}`
 	conn.sendMessage(id, hasil, MessageType.text)
 	})
+}
+if (text.includes(".fakta")){
+const teks = text.replace(/.fakta /, "")
+axios.get(`https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/faktaunix.txt${teks}`).then((res) => {
+    let hasil = `fakta tersedia\n👇👇👇👇👇👇👇👇👇\n\nJudul: ${res.data.title}\n\fakta Tersedia: ${res.data.filesize}\n\nLink: ${res.data.result}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".katabijak")){
+const teks = text.replace(/.katabijak /, "")
+axios.get(`https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/katabijax.txt${teks}`).then((res) => {
+    let hasil = `katabijak tersedia\n👇👇👇👇👇👇👇👇👇\n\nJudul: ${res.data.title}\n\katabijak Tersedia: ${res.data.filesize}\n\nLink: ${res.data.result}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
 }
 if (text.includes(".alay")){
 	const alay = text.split(".alay")[1]
