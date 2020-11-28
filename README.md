@@ -20,6 +20,7 @@ Script ini di modifikasi sama saya sendiri XP-TN
 > Support My Github😘
 > Jangan Lupa follow github saya🤗
 > jika error lapor ke Pembuat script chat wa link ada di githu 
+```
 ### Cara Installnya
 Script ini di modifikasi sama saya sendiri XP-TN.
 ```bash
