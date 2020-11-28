@@ -14,6 +14,12 @@ Siapin alat dan bahannya.
 > kopi+rokok ;v
 ```
 
+### Informasi Pengguna
+Script ini di modifikasi sama saya sendiri XP-TN
+```bash
+> Support My Github😘
+> Jangan Lupa follow github saya🤗
+> jika error lapor ke Pembuat script chat wa link ada di githu 
 ### Cara Installnya
 Script ini di modifikasi sama saya sendiri XP-TN.
 ```bash
@@ -22,8 +28,8 @@ Script ini di modifikasi sama saya sendiri XP-TN.
 > termux-setup-storage
 > pkg install git && pkg install wget && pkg install ffmpeg && pkg install nodejs
 > apt update && apt upgrade
-> git clone https://github.com/XP-TN/XP-TNBOT
-> cd XP-TNBOT
+> git clone https://github.com/XP-TN/XP-TNNBOT
+> cd XP-TNNBOT
 > npm i -g cwebp && npm i -g ytdl && npm i  && npm i got && node index js
 > Tinggal scan kode qr yeee...done
 ```
