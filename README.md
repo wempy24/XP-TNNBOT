@@ -58,6 +58,7 @@ Script ini di modifikasi sama saya sendiri XP-TN.
 |       ✅       | Toxic (new)                      |
 |       ✅       | loli                             |
 |       ✅       | hentai                           |
+|       ✅       | anime                            |
 |       ✅       | Owner (new)                      |
 |       ✅       | kata bijak                       |
 |       ✅       | Fakta                            |
