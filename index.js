@@ -628,8 +628,6 @@ conn.sendMessage(id, 'kirim .foto cewek/cowok\n\nContoh: .foto cewek' ,MessageTy
                conn.sendMessage(id, pantun, MessageType.text)
             });
       }
-
-   }
       if (is == '.anime')
       {
 
