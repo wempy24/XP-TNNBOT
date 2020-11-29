@@ -1,6 +1,6 @@
 /*
 * "Jangan modal nama doang bro!!!"
-* (Scriptnya XP-TN).
+* (Scriptnya XP-TN&ARIS187 ID).
 */
 const BotName = '👾XP-TN👾'; // Nama Bot Whatsapp
 const instagramlu = 'https://instagram.com/mragung23'; // Nama Instagramlu cok
