@@ -257,6 +257,102 @@ axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".harinasional")){
+  const teks = text.replace(/#harinasional /, "")
+  axios.get(`https://api.haipbis.xyz/harinasional?tanggal=${teks}`).then ((res) =>{
+  conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+  let hasil = `menurut tanggal ${teks} adalah\n\n *Tanggal* : _${res.data.tanggal}_ \n *Keterangan* : _${res.data.keterangan}_ `;
+  conn.sendMessage(id, hasil, MessageType.text);
+})
+}
+else if (text == '.quran'){
+axios.get('https://api.banghasan.com/quran/format/json/acak').then((res) => {
+    const sr = /{(.*?)}/gi;
+    const hs = res.data.acak.id.ayat;
+    const ket = `${hs}`.replace(sr, '');
+    let hasil = `[${ket}]   ${res.data.acak.ar.teks}\n\n${res.data.acak.id.teks}(QS.${res.data.surat.nama}, Ayat ${ket})`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".bitly")){
+const teks = text.replace(/.bitly /, "")
+axios.get(`https://api.haipbis.xyz/bitly?url=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = `nih kak :) \n\n${res.data.result}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes("!")){
+const teks = text.replace(/! /, "")
+axios.get(`https://arugaz.herokuapp.com/api/simisimi?kata=${teks}&apikey=-qUT.L4-Lm3T2seaKt2DYRuTPrETFysl1hx4qegW`).then((res) => {
+    let hasil = `${res.data.result}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".puisi1")){
+const teks = text.replace(/.puisi1 /, "")
+axios.get(`https://arugaz.herokuapp.com/api/puisi1`).then((res) => {
+conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *Nih Puisinya Kak :)*\n\n _${res.data.result}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".puisi2")){
+const teks = text.replace(/.puisi2 /, "")
+axios.get(`https://arugaz.herokuapp.com/api/puisi3`).then((res) => {
+conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *Nih Puisinya Kak :)*\n\n _${res.data.result}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".cerpen")){
+const teks = text.replace(/.cerpen /, "")
+axios.get(`https://arugaz.herokuapp.com/api/cerpen`).then((res) => {
+conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *Nih cerpen Kak :)*\n\n _${res.data.result}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".cersex")){
+const teks = text.replace(/.cersex /, "")
+axios.get(`https://arugaz.herokuapp.com/api/cersex2`).then((res) => {
+conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *Nih cersex Kak :)*\n\n _${res.data.result}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".quotes1")){
+const teks = text.replace(/.quotes1 /, "")
+axios.get(`https://arugaz.herokuapp.com/api/randomquotes`).then((res) => {
+conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *Nih Quotes Kak :)*\n\n *Author* : _${res.data.author}_ \n\n *Quotes* : _${res.data.quotes}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".spamcall")){
+const teks = text.replace(/.spamcall /, "")
+axios.get(`https://arugaz.herokuapp.com/api/spamcall?no=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
+    let hasil = ` *INFO SPAM CALL* \n\n _${res.data.logs}_`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".bucin")){
+const teks = text.replace(/.bucin /, "")
+axios.get(`https://arugaz.herokuapp.com/api/howbucins`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
+    let hasil = ` _${res.data.desc}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".infogempa")){
+  const teks = text.replace(/.infogempa /, "")
+  axios.get(`https://arugaz.herokuapp.com/api/infogempa`).then ((res) =>{
+  conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
+  let hasil = ` *INFO GEMPA* \n\ *Lokasi* : _${res.data.lokasi}_ \n *Kedalaman✍️* : _${res.data.kedalaman}_ \n *Koordinat✍️* : _${res.data.koordinat}_ \n *Magnitude✍️* : _${res.data.magnitude}_ \n *Waktu✍️* : _${res.data.waktu}_ `;
+  conn.sendMessage(id, hasil, MessageType.text);
+})
+}
 if (text.includes(".infoig")){
   const teks = text.replace(/.infoig /, "")
   axios.get(`https://st4rz.herokuapp.com/api/stalk?username=${teks}`).then ((res) =>{
