@@ -282,6 +282,23 @@ axios.get(`https://api.haipbis.xyz/bitly?url=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".gay")){
+const teks = text.replace(/.gay /, "")
+axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
+    let hasil = ` ${res.data.desc} \n\n *Persen Gay Lo!!!* _${res.data.persen}_`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".tts")){
+const teks = text.replace(/.tts /, "")
+axios.get(`http://scrap.terhambar.com/tts?kata=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
+    let hasil = ` ${res.data.result.base64} \n\n ${res.data.result.path} `;
+    conn.sendMessage(id, hasil ,MessageType.audio);
+})
+}
+
 if (text.includes("!")){
 const teks = text.replace(/! /, "")
 axios.get(`https://arugaz.herokuapp.com/api/simisimi?kata=${teks}&apikey=-qUT.L4-Lm3T2seaKt2DYRuTPrETFysl1hx4qegW`).then((res) => {
