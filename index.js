@@ -289,14 +289,6 @@ axios.get('https://api.banghasan.com/quran/format/json/acak').then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-if (text.includes(".kbbi")
-const teks = text.replace(/.kbbi /, "")
-axios.get(`https://mhankbarbar.herokuapp.com/api/kbbi?query${teks}F0Zuy3oCaQogy9MOt3tk`)then((res=> {
-conn.sendMessage(id, '[WAIT] Searching...', MessageType.text)
-    let hasil = ` *Nih KBBI :)*\n\n _${res.data.result}_ `;
-    conn.sendMessage(id, hasil ,MessageType.text);
-})
-}
 if (text.includes(".bitly")){
 const teks = text.replace(/.bitly /, "")
 axios.get(`https://api.haipbis.xyz/bitly?url=${teks}`).then((res) => {
