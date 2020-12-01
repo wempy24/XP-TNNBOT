@@ -43,6 +43,11 @@ Siapin alat dan bahannya.
 > npm i got
 > node index.js
 ```
+```php
+### masih sebagaiyan vitur masih ada bug
+Nani kami betulkan😘 jnagan lupa follow
+Github ini dan support😅
+```
 
 ## Features
 
