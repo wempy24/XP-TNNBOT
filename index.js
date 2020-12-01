@@ -145,6 +145,12 @@ conn.sendMessage(id, 'Owner XP-TN wa.me/+6289655478810' ,MessageType.text);
 else if (text == 'Agung'){
 conn.sendMessage(id, 'Aku BOT nya XP-TN' ,MessageType.text);
 }
+else if (text == 'wenda'){
+conn.sendMessage(id, 'pacar owner ihh' ,MessageType.text);
+}
+else if (text == 'bangsat'){
+conn.sendMessage(id, 'toxic terdeteksi' ,MessageType.text);
+}
 else if (text == 'Ngentod'){
 conn.sendMessage(id, 'Pengin ngentod?' ,MessageType.text);
 }
@@ -259,7 +265,7 @@ axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
 }
 if (text.includes(".ytmp5")){
 const teks = text.replace(/.ytmp5 /, "")
-axios.get(`https://mhankbarbar.herokuapp.com/api/ytv?url=${apikey}F0Zuy3oCaQogy9MOt3tk`).then((res) => {
+axios.get(`https://st4rz.herokuapp.com/api/yta?url=${teks}`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
     let hasil = `✅Lagu Berhasil Di Download, silahkan klik link dan download hasilnya\nKlik link dibawahn\nJudul: ${res.data.title}\n\nDuration: ${res.data.inText}\n\nAudio: ${res.data.linkAudioOnly}`;
     conn.sendMessage(id, hasil ,MessageType.text);
@@ -267,7 +273,7 @@ axios.get(`https://mhankbarbar.herokuapp.com/api/ytv?url=${apikey}F0Zuy3oCaQogy9
 }
 if (text.includes(".yt")){
 const teks = text.replace(/.yt /, "")
-axios.get(`https://mhankbarbar.herokuapp.com/api/ytv?url=${teks}`).then((res) => {
+axios.get(`https://st4rz.herokuapp.com/api/ytv?url=${teks}`).then((res) => {
     let hasil = `Video telah tersedia pada link di bawah, silahkan klik link dan download hasilnya\n\n\nJudul: ${res.data.title}\n\nUkuran video: ${res.data.filesize}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -417,7 +423,7 @@ if (text.includes(".infoig")){
 }
 if (text.includes(".infogempa")){
   const teks = text.replace(/.infogempa /, "")
-  axios.get(`https://mhankbarbar.herokuapp.com/api/infogempa?apiKey=F0Zuy3oCaQogy9MOt3tk`).then ((res) =>{
+  axios.get(`https://mhankbarbar.herokuapp.com/api/infogempa?${teks}&apiKey=F0Zuy3oCaQogy9MOt3tk`).then ((res) =>{
   conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
   let hasil = ` *INFO GEMPA* \n\ *Lokasi* : _${res.data.lokasi}_ \n *Kedalaman✍️* : _${res.data.kedalaman}_ \n *Koordinat✍️* : _${res.data.koordinat}_ \n *Magnitude✍️* : _${res.data.magnitude}_ \n *Waktu✍️* : _${res.data.waktu}_ `;
   conn.sendMessage(id, hasil, MessageType.text);
@@ -792,19 +798,6 @@ conn.sendMessage(id, 'kirim .foto cewek/cowok\n\nContoh: .foto cewek' ,MessageTy
                conn.sendMessage(id, pantun, MessageType.text)
             });
       }
-      if (is == '.anime')
-      {
-
-         fetch('https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/anime/' + args[0] + '.txt')
-            .then(res => res.text())
-            .then(body =>
-            {
-               let randomnime = body.split('\n')
-               let randomnimex = randomnime[Math.floor(Math.random() * randomnime.length)]
-               conn.sendMessage(id, randomnimex, MessageType.text)
-            });
-      }
-
    }
    if (text.includes(".covid"))
    {
@@ -959,8 +952,6 @@ if (text.includes(".pokemon"))
     
     });
     }
-
-
    
    else if (text.includes(".nama")) 
   {
