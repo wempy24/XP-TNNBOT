@@ -45,7 +45,7 @@ Siapin alat dan bahannya.
 ```
 ### masih sebagaiyan vitur masih ada bug
 ```php
-Nani kami betulkan😘 jnagan lupa follow
+Nanti kami betulkan😘 jnagan lupa follow
 Github ini dan support😅
 ```
 ## Features
