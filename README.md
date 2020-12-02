@@ -37,6 +37,10 @@ Script ini di modifikasi sama saya sendiri XP-TN.
 ### install bahan² untuk PC/RDP
 Siapin alat dan bahannya.
 ```bash
+> Download Nodejs
+> jika udah open laLU install script ini
+> jika udh semua kalian pindahkan ke localdisk c
+> jika udah ketik di nodejs nya cd C:\XP-TNNBOT-main
 > npm i ytdl
 > npm i cwebp
 > npm i
