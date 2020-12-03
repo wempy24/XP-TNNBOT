@@ -302,6 +302,14 @@ axios.get(`https://api.haipbis.xyz/bitly?url=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".nekonime")) {
+  const teks = text.replace(/.nekonime /, "")
+  axios.get(`https://st4rz.herokuapp.com/api/nekonime`).then((res) => {
+    conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *Nih animenya :)*\n\n _${res.data.result}_ `;
+    conn.sendMessage(id, hasil, MessageType.text);
+  })
+}
 if (text.includes(".gay")){
 const teks = text.replace(/.gay /, "")
 axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
@@ -312,7 +320,7 @@ axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
 }
 if (text.includes("!")){
 const teks = text.replace(/! /, "")
-axios.get(`https://arugaz.herokuapp.com/api/simisimi?kata=${teks}&apikey=-qUT.L4-Lm3T2seaKt2DYRuTPrETFysl1hx4qegW`).then((res) => {
+axios.get(`https://st4rz.herokuapp.com/api/simsimi?kata=${teks}`).then((res) => {
     let hasil = `${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
