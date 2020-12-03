@@ -6,8 +6,8 @@ const BotName = '👾XP-TN👾'; // Nama Bot Whatsapp
 const instagramlu = 'https://instagram.com/mragung23'; // Nama Instagramlu cok
 const whatsapplu = 'https://Wa.me/+6289655478810'; // Nomor whatsapplu cok
 const kapanbotaktif = 'Tergantung jaringan'; // Kapan bot lu aktif
-const grupch1 = 'https://chat.whatsapp.com/H4FqNPQbWaR4JwOiXERT4t'; // OFFICIAL GRUP LU 1
-const grupch2 = 'https://chat.whatsapp.com/H4FqNPQbWaR4JwOiXERT4t'; // OFFICIAL GRUP LU 2
+const grupch1 = 'https://chat.whatsapp.com/GDdd0I3WlF5LnMVifmS7rN'; // OFFICIAL GRUP LU 1
+const grupch2 = 'https://chat.whatsapp.com/GDdd0I3WlF5LnMVifmS7rN'; // OFFICIAL GRUP LU 2
 const grupch3 = 'https://instagram.com/mragung23'; // OFFICIAL GRUP LU 3
 //
 const qrcode = require("qrcode-terminal");
