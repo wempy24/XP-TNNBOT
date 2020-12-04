@@ -269,10 +269,10 @@ conn.sendMessage(id, teks, MessageType.text)
 }
 
 if (text.includes(".ytmp3")){
-const teks = text.replace(/.yt /, "")
-axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
+const teks = text.replace(/.ytmp3 /, "")
+axios.get(`https://alfians-api.herokuapp.com/api/yta?url=${teks}`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
-    let hasil = `✅Lagu Berhasil Di Download, silahkan klik link dan download hasilnya\nKlik link dibawahn\nJudul: ${res.data.title}\n\nDuration: ${res.data.inText}\n\nAudio: ${res.data.linkAudioOnly}`;
+    let hasil = `*Judul:* ${res.data.title}\n\n *Zize:* ${res.data.filesize}\n\n *Audio:* ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -498,10 +498,10 @@ axios.get(`https://arugaz.herokuapp.com/api/chord?q=${teks}`).then((res) => {
 
 
 if (text.includes(".ytmp4")){
-const teks = text.replace(/.yt /, "")
-axios.get(`https://arugaz.herokuapp.com/api/ytv?url=${teks}`).then((res) => {
+const teks = text.replace(/.ytmp4 /, "")
+axios.get(`https://alfians-api.herokuapp.com/api/ytv?url=${teks}`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
-    let hasil = `✅Video Berhasil Di Download, silahkan klik link dan download hasilnya\nKlik link dibawahn\nJudul: ${res.data.title}\n\nDuration: ${res.data.inText}\n\nLink video: ${res.data.linkVideo}`;
+    let hasil = ` *Judul:* ${res.data.title}\n\n *Tipe:* ${res.data.ext}\n\n *Resolution:* ${res.data.resolution}\n\n *Zize:* ${res.data.filesize}\n\n *Audio:* ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
