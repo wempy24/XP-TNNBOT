@@ -957,7 +957,7 @@ _${kata}_
    if (text.includes(".shota"))
    {
     var items = ['shota anime', 'anime shota'];
-    var nime = items[Math.floor(Math.random() * shouta.length)];
+    var nime = items[Math.floor(Math.random() * items.length)];
     var url = "https://api.fdci.se/rep.php?gambar=" + nime;
 
     axios.get(url)
