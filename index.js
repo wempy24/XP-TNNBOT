@@ -330,14 +330,6 @@ axios.get(`https://arugaz.herokuapp.com/api/wikien?q=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-if (text.includes(".waifu")) {
-  const teks = text.replace(/.waifu /, "")
-  axios.get(`https://arugaz.herokuapp.com/api/waifu`).then((res) => {
-    conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-    let hasil = ` *Nih waifunya :)*\n\n _${res.data.result}_ `;
-    conn.sendMessage(id, hasil, MessageType.text);
-  })
-}
 if (text.includes(".nekonime")) {
   const teks = text.replace(/.nekonime /, "")
   axios.get(`https://st4rz.herokuapp.com/api/nekonime`).then((res) => {
@@ -581,9 +573,9 @@ axios.get('https://api.banghasan.com/quran/format/json/acak').then((res) => {
 }
 if (text.includes(".resep")){
 const teks = text.replace(/.resep /, "")
-axios.get(`https://arugaz.herokuapp.com/api/resep?query=${teks}`).then((res) => {
+axios.get(`https://masak-apa.tomorisakura.vercel.app/api/search/?q=${teks}`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-    let hasil = ` *Resep Makanan ${teks} :* \n\n *Judul* : _${res.data.result.difficulty}_ \n\n *Kata Kunci*: _${res.data.result.key}_ \n\n *Waktu* _${res.data.result.times}_ \n\n *Judul* : _${res.data.result.title}_ \n\n *Porsi* : _${res.data.result.serving}_ `;
+    let hasil = ` *Judul:* ${results.title}\n*Penulis:* ${results.author.user}\n*Rilis:* ${results.author.datePublished}\n*Level:* ${results.dificulty}\n*Waktu:* ${results.times}\n*Porsi:* ${results.servings}\n\n*Bahan-bahan:*\n${bahan}\n\n*Step-by-step:*\n${tutor}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -591,7 +583,7 @@ if (text.includes(".namaninja")){
 const teks = text.replace(/.namaninja /, "")
 axios.get(`https://api.terhambar.com/ninja?nama=${teks}`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-    let hasil = `Nama Ninja kamu🙂:\n\n${res.message.data.result}`;
+    let hasil = `Nama Ninja kamu🙂:\n\n${res.data.result.ninja}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -893,6 +885,37 @@ _${kata}_
 
          });
    }
+   
+   if (text.includes("!waifu"))
+   {
+    var items = ["waifu","anime waifu"];
+    var anim = items[Math.floor(Math.random() * items.length)];
+    var url = "https://api.haipbis.xyz/waifu";
+    
+    axios.get(url)
+      .then((result) => {
+        var b = JSON.parse(JSON.stringify(result.data));
+        var anim =  b[Math.floor(Math.random() * b.length)];
+        imageToBase64(anim) // Path to the image
+        .then(
+            (response) => {
+	var buf = Buffer.from(response, 'base64'); // Ta-da	
+              conn.sendMessage(
+            id,
+              buf,MessageType.image)
+       
+            }
+        )
+        .catch(
+            (error) => {
+                console.log(error); // Logs an error if there was one
+            }
+        )
+    
+    });
+    }
+
+
    
    if (text.includes(".hentai"))
    {
