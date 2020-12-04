@@ -12,7 +12,7 @@ BOT WHATSAPP TERMUX ONLY BY XP-TN
 <a href="https://github.com/XP-TN"><img title="XP-TNNBOT" src="https://img.shields.io/badge/AUTHOR-XP-TN ID-orange.svg?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center">
-<a href="https://www.codefactor.io/repository/github/XP-TN/AR15BOT"><img title="Rating" src="https://www.codefactor.io/repository/github/XP-TN/XP-TNNBOT/badge/master"></a>
+<a href="https://www.codefactor.io/repository/github/XP-TN/XP-TN"><img title="Rating" src="https://www.codefactor.io/repository/github/XP-TN/XP-TN/badge/master"></a>
 </p>
 <p align="center">
 <a href="https://github.com/XP-TN/XP-TNNBOT/followers"><img title="Followers" src="https://img.shields.io/github/followers/XP-TN?color=blue&style=flat-square"></a>
