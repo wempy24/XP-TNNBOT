@@ -310,6 +310,14 @@ axios.get(`https://arugaz.herokuapp.com/api/wikien?q=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".waifu")) {
+  const teks = text.replace(/.waifu /, "")
+  axios.get(`https://arugaz.herokuapp.com/api/waifu`).then((res) => {
+    conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *Nih waifunya :)*\n\n _${res.data.result}_ `;
+    conn.sendMessage(id, hasil, MessageType.text);
+  })
+}
 if (text.includes(".nekonime")) {
   const teks = text.replace(/.nekonime /, "")
   axios.get(`https://st4rz.herokuapp.com/api/nekonime`).then((res) => {
