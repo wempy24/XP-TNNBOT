@@ -3,7 +3,7 @@ BOT WHATSAPP TERMUX ONLY BY XP-TN
 <img src = "https://avatars3.githubusercontent.com/u/49530313?s=460&u=086c7b0d17c5b8e906200d810e88587f5c98e349&v=4" width="320">
 
 <p align="center">
-<img src="https://www.instagram.com/p/CHBN7kKngSV/?igshid=x8w6u9wlix9u" width="128" height="128"/>
+<img src="https://raw.githubusercontent.com/XP-TN/XP-TNNBOT/main/temp/A187.jpg" width="230" height="230"/>
 </p>
 <p align="center">
 <a href="#"><img title="👾XP-TN👾" src="https://img.shields.io/badge/XP-TN-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
