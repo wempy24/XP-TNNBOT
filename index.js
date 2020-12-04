@@ -571,6 +571,14 @@ axios.get('https://api.banghasan.com/quran/format/json/acak').then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".resep")){
+const teks = text.replace(/.resep /, "")
+axios.get(`https://arugaz.herokuapp.com/api/resep?query=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *Resep Makanan ${teks} :* \n\n *Judul* : _${res.data.result.difficulty}_ \n\n *Kata Kunci*: _${res.data.result.key}_ \n\n *Waktu* _${res.data.result.times}_ \n\n *Judul* : _${res.data.result.title}_ \n\n *Porsi* : _${res.data.result.serving}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes(".namaninja")){
 const teks = text.replace(/.namaninja /, "")
 axios.get(`https://api.terhambar.com/ninja?nama=${teks}`).then((res) => {
