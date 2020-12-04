@@ -511,7 +511,7 @@ conn.sendMessage(id, titoe, MessageType.text);
 
 if (text.includes(".fb")){
 const teks = text.replace(/.fb /, "")
-axios.get(`http://scrap.terhambar.com/fb?link=${teks}`).then((res) => {
+axios.get(`https://arugaz.herokuapp.com/api/fb?url=${teks}`).then((res) => {
     let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..\n\nJudul: ${res.data.title}\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
