@@ -6,7 +6,7 @@ BOT WHATSAPP TERMUX ONLY BY XP-TN
 <img src="https://www.instagram.com/p/CHBN7kKngSV/?igshid=x8w6u9wlix9u" width="128" height="128"/>
 </p>
 <p align="center">
-<a href="#"><img title="👾XP-TN👾" src="https://img.shields.io/badge/AR15BOT-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="👾XP-TN👾" src="https://img.shields.io/badge/XP-TN-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
 <a href="https://github.com/XP-TN"><img title="XP-TNNBOT" src="https://img.shields.io/badge/AUTHOR-XP-TN ID-orange.svg?style=for-the-badge&logo=github"></a>
@@ -19,7 +19,7 @@ BOT WHATSAPP TERMUX ONLY BY XP-TN
 <a href="https://github.com/XP-TN/XP-TNNBOT/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/A187ID/XP-TN?color=red&style=flat-square"></a>
 <a href="https://github.com/XP-TN/XP-TNNBOT/network/members"><img title="Forks" src="https://img.shields.io/github/forks/XP-TN/XP-TNNBOT?color=red&style=flat-square"></a>
 <a href="https://github.com/XP-TN/XP-TNNBOT/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/XP-TN/XP-TNNBOT?label=Watchers&color=blue&style=flat-square"></a>
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%XP-TN%XP-TN&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FXP-TN%2FXP-TNNBOT&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Support&edge_flat=false"/></a>
 </p>
 
 ### Alat dan Bahan
