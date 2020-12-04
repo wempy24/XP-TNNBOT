@@ -302,6 +302,14 @@ axios.get(`https://api.haipbis.xyz/bitly?url=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".wikien")){
+const teks = text.replace(/.wikien /, "")
+axios.get(`https://arugaz.herokuapp.com/api/wikien?q=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *👩‍💻According to Wikipedia:👩‍💻* \n\n _${res.data.result}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes(".nekonime")) {
   const teks = text.replace(/.nekonime /, "")
   axios.get(`https://st4rz.herokuapp.com/api/nekonime`).then((res) => {
