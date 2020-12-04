@@ -954,6 +954,35 @@ _${kata}_
     });
     }
     
+   if (text.includes(".shota"))
+   {
+    var items = ['shota anime', 'anime shota'];
+    var nime = items[Math.floor(Math.random() * shouta.length)];
+    var url = "https://api.fdci.se/rep.php?gambar=" + nime;
+
+    axios.get(url)
+      .then((result) => {
+        var n = JSON.parse(JSON.stringify(result.data));
+        var nimek = n[Math.floor(Math.random() * n.length)];
+        imageToBase64(nimek)
+        .then(
+            (response) => {
+	var buf = Buffer.from(response, 'base64'); 
+              conn.sendMessage(
+            id,
+              buf,MessageType.image)
+       
+            }
+        )
+        .catch(
+            (error) => {
+                console.log(error);
+            }
+        )
+    
+    });
+    }
+    
 if (text.includes(".pokemon"))
    {
     var items = ["anime pokemon"];
