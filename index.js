@@ -373,6 +373,14 @@ conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".infoanime")){
+const teks = text.replace(/.infoanime /, "")
+axios.get(`https://arugaz.herokuapp.com/api/dewabatch?q=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
+    let hasil = ` *INFO ANIME ${teks} :* \n\n _${res.data.result}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes(".otakudesu")){
 const teks = text.replace(/.otakudesu /, "")
 const animes =  axios.get(`https://mhankbarbar.herokuapp.com/api/otakudesu?q=${teks}&apiKey=F0Zuy3oCaQogy9MOt3tk`).then((res) => {
