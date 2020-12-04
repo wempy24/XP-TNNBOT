@@ -24,6 +24,12 @@ BOT WHATSAPP TERMUX ONLY BY XP-TN
 <details>
  
 </details>
+
+
+
+
+
+
 ### Alat dan Bahan
 Siapin alat dan bahannya.
 ```bash
