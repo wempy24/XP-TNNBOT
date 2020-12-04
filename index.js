@@ -289,6 +289,14 @@ axios.get(`https://st4rz.herokuapp.com/api/ytv?url=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".bitly")){
+const teks = text.replace(/.bitly /, "")
+axios.get(`https://api.haipbis.xyz/bitly?url=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = `nih kak :) \n\n${res.data.result}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes(".harinasional")){
   const teks = text.replace(/#harinasional /, "")
   axios.get(`https://api.haipbis.xyz/harinasional?tanggal=${teks}`).then ((res) =>{
