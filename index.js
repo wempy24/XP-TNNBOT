@@ -248,7 +248,19 @@ if (text.includes('.nulis')){
         })
     })
 }
-
+if (text.includes('.tts2')){
+  var teks = text.replace(/.tts2 /, '')
+    axios.get('http://scrap.terhambar.com/tts?kata=${teks}')
+    .then((res) => {
+      audioToBase64(res.data.result)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.audio)
+        })
+    })
+}
 
 if (text.includes(".say")){
   const teks = text.replace(/.say /, "")
