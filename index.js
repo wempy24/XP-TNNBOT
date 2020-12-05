@@ -339,6 +339,14 @@ if (text.includes(".nekonime")) {
     conn.sendMessage(id, hasil, MessageType.text);
   })
 }
+if (text.includes(".dewabatch")){
+const teks = text.replace(/.dewabatch /, "")
+axios.get(`https://alfians-api.herokuapp.com/api/dewabatch?q=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = `Anime Nya nih :) \n\n${res.data.result}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes(".gay")){
 const teks = text.replace(/.gay /, "")
 axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
