@@ -467,7 +467,7 @@ axios.get(`https://arugaz.herokuapp.com/api/sdmovie?film=${teks}`).then((res) =>
 }
 if (text.includes(".infoig")){
   const teks = text.replace(/.infoig /, "")
-  axios.get(`https://mhankbarbar.herokuapp.com/api/stalk?username=${teks}&apiKey=F0Zuy3oCaQogy9MOt3tk`).then ((res) =>{
+  axios.get(`https://arugaz.herokuapp.com/api/stalk?username={teks}&apiKey=F0Zuy3oCaQogy9MOt3tk`).then ((res) =>{
   conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
   let hasil = `BIODATA INSTAGRAM ATAS NAMA _${teks}_ \n\n *Username✍️* : _${res.data.Username}_ \n *Nama✍️* : _${res.data.Name}_ \n *Jumlah Followers✍️* : _${res.data.Jumlah_Followers}_ \n *Jumlah_Following✍️* : _${res.data.Jumlah_Following}_ \n *Jumlah_Post✍️* : _${res.data.Jumlah_Post}_ `;
   conn.sendMessage(id, hasil, MessageType.text);
@@ -475,7 +475,7 @@ if (text.includes(".infoig")){
 }
 if (text.includes(".infogempa")){
   const teks = text.replace(/.infogempa /, "")
-  axios.get(`https://mhankbarbar.herokuapp.com/api/infogempa?${teks}&apiKey=F0Zuy3oCaQogy9MOt3tk`).then ((res) =>{
+  axios.get(`https://arugaz.herokuapp.com/api/infogempa${teks}&apiKey=F0Zuy3oCaQogy9MOt3tk`).then ((res) =>{
   conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
   let hasil = ` *INFO GEMPA* \n\ *Lokasi* : _${res.data.lokasi}_ \n *Kedalaman✍️* : _${res.data.kedalaman}_ \n *Koordinat✍️* : _${res.data.koordinat}_ \n *Magnitude✍️* : _${res.data.magnitude}_ \n *Waktu✍️* : _${res.data.waktu}_ `;
   conn.sendMessage(id, hasil, MessageType.text);
@@ -548,8 +548,8 @@ axios.get(`https://arugaz.herokuapp.com/api/fb?url=${teks}`).then((res) => {
 
 if (text.includes(".ig")){
 const teks = text.replace(/.ig /, "")
-axios.get(`https://st4rz.herokuapp.com/api/ig?url=${teks}`).then((res) => {
-    let hasil = `Dwonload sendiri,link error maaf\n\nLink: ${res.data.result}`;
+axios.get(`https://alfians-api.herokuapp.com/api/ig?url=${teks}`).then((res) => {
+    let hasil = `Dwonload sendiri,link\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
