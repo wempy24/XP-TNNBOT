@@ -323,6 +323,14 @@ axios.get(`https://api.haipbis.xyz/bitly?url=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".textimage")){
+const teks = text.replace(/.textimage /, "")
+axios.get(`https://api.haipbis.xyz/randomcooltext?text=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = `Text Image Succes :) \n\n${res.data.result}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes(".wikien")){
 const teks = text.replace(/.wikien /, "")
 axios.get(`https://arugaz.herokuapp.com/api/wikien?q=${teks}`).then((res) => {
