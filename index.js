@@ -1,6 +1,6 @@
 /*
 * "Jangan modal nama doang bro!!!"
-* (Scriptnya XP-TN&ARIS187 ID).
+* (Scriptnya XP-TN&fiqking).
 */
 const BotName = '👾XP-TN👾'; // Nama Bot Whatsapp
 const instagramlu = 'https://instagram.com/mragung23'; // Nama Instagramlu cok
@@ -1048,7 +1048,7 @@ if (text.includes(".pokemon"))
   {
     const cheerio = require('cheerio');
     const request = require('request');
-    var nama = text.split(".nama ")[1];
+    var nama = text.split("!nama ")[1];
     var req = nama.replace(/ /g,"+");
     request.get({
         headers: {'content-type' : 'application/x-www-form-urlencoded'},
@@ -1063,18 +1063,21 @@ if (text.includes(".pokemon"))
       console.log(""+ h);
       conn.sendMessage(id,
             `
-      Arti dari namamu adalah
-🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣
-         Nama _*${nama}*_ ${h}
+      Arti dari nama *${nama}* adalah
+
+❉──────────❉
+
+         Nama _*${nama}*_ _${h}_
          
-🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥
+❉──────────❉
+
 `,
  MessageType.text);
   });
   }
   else if (text.includes(".pasangan ")) {
     const request = require('request');
-    var gh = text.split(".pasangan ")[1];
+    var gh = text.split("!pasangan ")[1];
     var namamu = gh.split("&")[0];
     var pasangan = gh.split("&")[1];
     request.get({
@@ -1091,10 +1094,16 @@ if (text.includes(".pokemon"))
         var d = h.replace("&amp;", '&')
       console.log(""+ d);
       conn.sendMessage(id, `
-🐼🐼🐼🐼🐼🐼🐼🐼🐼
+
+❉──────────❉
+
  *Kecocokan berdasarkan nama*
- ${d}
-🐼🐼🐼🐼🐼🐼🐼🐼🐼
+
+
+ _${d}_
+
+
+❉──────────❉
     `, MessageType.text);
   });
   }
