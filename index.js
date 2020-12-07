@@ -347,6 +347,22 @@ if (text.includes(".nekonime")) {
     conn.sendMessage(id, hasil, MessageType.text);
   })
 }
+if (text.includes(".wetzodiak")){
+const teks = text.replace(/.wetzodiak /, "")
+axios.get(`https://arugaz.herokuapp.com/api/getzodiak?nama=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = `wetzodiak tersedia \n\n *nama* : _${res.data.nama}_ \n *lahir* _${res.data.lahir}_ \n *ultah* _${res.data.ultah}_ \n *usia* _{res.data.usia}_`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".namajenis")){
+const teks = text.replace(/.namajenis /, "")
+axios.get(`https://api.terhambar.com/nama?jenis=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = `Text Image Succes :) \n\n${res.data.result}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes(".coronainfoall")){
 const teks = text.replace(/.coronainfoall /, "")
 axios.get(`https://api.terhambar.com/negara/World`).then((res) => {
