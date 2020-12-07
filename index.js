@@ -349,7 +349,7 @@ if (text.includes(".nekonime")) {
 }
 if (text.includes(".coronainfoall")){
 const teks = text.replace(/.coronainfoall /, "")
-axios.get(`https://api.terhambar.com/negara/World${teks}`).then((res) => {
+axios.get(`https://api.terhambar.com/negara/World`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
     let hasil = `info corona all \n\n *negara* : _${res.data.negara}_ \n *total* : _${res.data.total}_ \n *kasus_baru* : _${res.data.kasus_baru}_ \n *meninggal* : _${res.data.meninggal}_ \n *meninggal_baru* : _${res.data.meninggal_baru}_ \n *sembuh* : _${res.data.sembuh}_ \n *penanganan* : _${res.data.penanganan}_ \n *terakhir* : _${res.data.terakhir}`;
     conn.sendMessage(id, hasil ,MessageType.text);
@@ -491,7 +491,7 @@ if (text.includes(".infoig")){
 }
 if (text.includes(".infogempa")){
   const teks = text.replace(/.infogempa /, "")
-  axios.get(`https://api.haipbis.xyz/bmkg${teks}`).then((res) =>{
+  axios.get(`https://api.haipbis.xyz/bmkg`).then((res) =>{
   conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
   let hasil = ` *INFO GEMPA* \n\ *Lokasi* : _${res.data.lokasi}_ \n *Kedalaman✍️* : _${res.data.kedalaman}_ \n *Koordinat✍️* : _${res.data.koordinat}_ \n *Magnitude✍️* : _${res.data.magnitude}_ \n *Waktu✍️* : _${res.data.waktu}_ `;
   conn.sendMessage(id, hasil, MessageType.text);
