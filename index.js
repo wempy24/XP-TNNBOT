@@ -171,6 +171,9 @@ conn.sendMessage(id, 'Test 1,2,3 ketik .help' ,MessageType.text);
 else if (text == 'Hai'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh #help' ,MessageType.text);
 }
+else if (text == '.ttp'){
+conn.sendMessage(id, ' *COMMAND PREMIUM CHAT WA https://wa.me/6289655478810* ' ,MessageType.text);
+}
 else if (text == 'Woi'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh #help' ,MessageType.text);
 }
@@ -230,6 +233,9 @@ conn.sendMessage(id, ' *Menampilkan Fitur tools3!!!* ' ,MessageType.text);
 }
 else if (text == '.tools4'){
 conn.sendMessage(id, ' *Menampilkan Fitur tools4!!!* ' ,MessageType.text);
+}
+else if (text == '.tools5'){
+conn.sendMessage(id, ' *Menampilkan Fitur tools5!!!* ' ,MessageType.text);
 }
 else if (text == 'Euy'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh #help' ,MessageType.text);
@@ -1095,6 +1101,9 @@ else if (text == '.tools3'){
 conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
 }
 else if (text == '.tools4'){
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+}
+else if (text == '.tools5'){
 conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
 }
    if (messageType == 'imageMessage')
