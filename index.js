@@ -316,13 +316,38 @@ axios.get(`https://api.haipbis.xyz/bitly?url=${teks}`).then((res) => {
 })
 }
 if (text.includes(".harinasional")){
-  const teks = text.replace(/#harinasional /, "")
-  axios.get(`https://api.haipbis.xyz/harinasional?tanggal=${teks}`).then ((res) =>{
-  conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-  let hasil = `menurut tanggal ${teks} adalah\n\n *Tanggal* : _${res.data.tanggal}_ \n *Keterangan* : _${res.data.keterangan}_ `;
-  conn.sendMessage(id, hasil, MessageType.text);
-})
-}
+const teks = text.replace(/.harinasional /, "")
+axios.get(`https://api.haipbis.xyz/harinasional?tanggal=${teks}`).then((res) => {
+    let hasil = `➸  *Tanggal : ${res.data.tanggal}*\n\n➸ keterangan : ${res.data.keterangan}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+  })
+ }
+  if (text.includes('.cooltext')){
+  var teks = text.replace(/%cooltext /, '')
+    axios.get('https://api.haipbis.xyz/randomcooltext?text='+teks)
+    .then((res) => {
+      imageToBase64(res.data.image)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[❗] SEDANG DIPROSES', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+} 
+if (text.includes('.map')){
+  var teks = text.replace(/.map /, '')
+    axios.get('https://mnazria.herokuapp.com/api/maps?search='+teks)
+    .then((res) => {
+      imageToBase64(res.data.gambar)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[❗] SEDANG DIPROSES', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+} 
 else if (text == '.quran'){
 axios.get('https://api.banghasan.com/quran/format/json/acak').then((res) => {
     const sr = /{(.*?)}/gi;
@@ -554,7 +579,7 @@ axios.get(`https://arugaz.herokuapp.com/api/chord?q=${teks}`).then((res) => {
 
 
 if (text.includes(".ytmp6")){
-const teks = text.replace(/.ytmp4 /, "")
+const teks = text.replace(/.ytmp6 /, "")
 axios.get(`https://alfians-api.herokuapp.com/api/ytv?url=${teks}`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
     let hasil = ` *Judul:* ${res.data.title}\n\n *Tipe:* ${res.data.ext}\n\n *Resolution:* ${res.data.resolution}\n\n *Zize:* ${res.data.filesize}\n\n *Audio:* ${res.data.result}`;
