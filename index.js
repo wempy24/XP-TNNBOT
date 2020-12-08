@@ -1,6 +1,8 @@
 /*
 * "Jangan modal nama doang bro!!!"
-* (Scriptnya XP-TN&fiqking).
+* (Scriptnya XP-TN&fiqking)
+* Jangan ubah semunya nya kecuali nama bot owner bot grouplink youtube dan sebagainya tidak boleh!!!
+* hargai pembuat skrip ya!!!
 */
 const XP-TN = '👾XP-TN👾'; // Nama Bot Whatsapp
 const instagram = 'https://instagram.com/mragung23'; // Nama Instagramlu cok
