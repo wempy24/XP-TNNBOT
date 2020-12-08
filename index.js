@@ -383,7 +383,7 @@ if (text.includes(".namajenis")){
 const teks = text.replace(/.namajenis /, "")
 axios.get(`https://api.terhambar.com/nama?jenis=${teks}`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-    let hasil = `Text Image Succes :) \n\n${res.data.result}`;
+    let hasil = `Text Image Succes :) \n *namajenis* : _{res.data.nama}_ \n${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
