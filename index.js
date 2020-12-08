@@ -206,6 +206,15 @@ conn.sendMessage(id, 'Ya?, Ketik #help/#info/#donasi Contoh #help' ,MessageType.
 else if (text == 'Cuy'){
 conn.sendMessage(id, 'Ya?, Ketik #help/#info/#donasi Contoh #help' ,MessageType.text);
 }
+else if (text == '.frendsowner'){
+conn.sendMessage(id, 'kawan1 iskandar wa.me/+60136670107' ,MessageType.text);
+}
+else if (text == '.coowner'){
+conn.sendMessage(id, 'kawan2 testing script wa.me/+6282232931618' ,MessageType.text);
+}
+else if (text == '.groupbot'){
+conn.sendMessage(id, 'group bot whatsapp https://chat.whatsapp.com/GDdd0I3WlF5LnMVifmS7rN' ,MessageType.text);
+}
 else if (text == 'Euy'){
 conn.sendMessage(id, 'Ya?, Ketik #help/#info/#donasi Contoh #help' ,MessageType.text);
 }
