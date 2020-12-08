@@ -1147,37 +1147,6 @@ _${kata}_
          });
    }
    
-   if (text.includes(".waifu"))
-   {
-    var items = ["waifu","anime waifu"];
-    var anim = items[Math.floor(Math.random() * items.length)];
-    var url = "https://api.haipbis.xyz/waifu";
-    
-    axios.get(url)
-      .then((result) => {
-        var b = JSON.parse(JSON.stringify(result.data));
-        var anim =  b[Math.floor(Math.random() * b.length)];
-        imageToBase64(anim) // Path to the image
-        .then(
-            (response) => {
-	var buf = Buffer.from(response, 'base64'); // Ta-da	
-              conn.sendMessage(
-            id,
-              buf,MessageType.image)
-       
-            }
-        )
-        .catch(
-            (error) => {
-                console.log(error); // Logs an error if there was one
-            }
-        )
-    
-    });
-    }
-
-
-   
    if (text.includes(".hentai"))
    {
     var items = ["nsfwneko","anime hentai"];
@@ -1632,7 +1601,20 @@ if (text.includes('.ssweb')){
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
-} 
+}
+  if (text.includes('.waifu')){
+  var teks = text.replace(/.waifu /, '')
+    axios.get('https://st4rz.herokuapp.com/api/waifu')
+    .then((res) => {
+      imageToBase64(res.data.image)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[❗] SEDANG DIPROSES', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}  
 if (text.includes('.ytmp3')){
   var teks = text.replace(/.ytmp3 /, '')
     axios.get('https://st4rz.herokuapp.com/api/yta2?url='+teks)
