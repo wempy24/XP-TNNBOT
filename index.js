@@ -1652,6 +1652,20 @@ if (text.includes('.ytmp3')){
         })
     })
 }
+if (text.includes(".ytmp3")){
+const teks = text.replace(/.ytmp3 /, "")
+axios.get(`https://st4rz.herokuapp.com/api/yta2?url=${teks}`).then((res) => {
+    let hasil = `Audio telah tersedia pada link di bawah, silahkan klik link dan download hasilnya\n👇👇👇👇👇👇👇👇👇\n\nJudul : ${res.data.title}\n\nLink: ${res.data.result}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".ytmp4")){
+const teks = text.replace(/.ytmp4 /, "")
+axios.get(`https://st4rz.herokuapp.com/api/ytv2?url=${teks}`).then((res) => {
+    let hasil = `Audio telah tersedia pada link di bawah, silahkan klik link dan download hasilnya\n👇👇👇👇👇👇👇👇👇\n\nJudul : ${res.data.title}\n\nLink: ${res.data.result}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes(".ping")){
 const teks = text.replace(/.ping /, "")
 axios.get(`https://api.banghasan.com/domain/nping/${teks}`).then((res) => {
