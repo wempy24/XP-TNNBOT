@@ -366,12 +366,11 @@ if (text.includes(".nekonime")) {
 }
 if (text.includes(".wetzodiak")){
 const teks = text.replace(/.wetzodiak /, "")
-axios.get(`https://arugaz.herokuapp.com/api/getzodiak?nama=${teks}`).then((res) => {
-	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-    let hasil = `wetzodiak tersedia \n\n *nama* : _${res.data.nama}_ \n *lahir* _${res.data.lahir}_ \n *ultah* _${res.data.ultah}_ \n *usia* _{res.data.usia}_ \n *zodiak* _{res.data.zodiak}_`;
+axios.get(`https://arugaz.herokuapp.com/api/getzodiak?nama=aruga&tgl-bln-thn=${teks}`).then((res) => {
+    let hasil = `➡️ Lahir : ${res.data.lahir}*\n➡ ️ultah : ${res.data.ultah}\n➡ ️usia : ${res.data.usia}\n➡ zodiak : ${res.data.zodiak}️`;
     conn.sendMessage(id, hasil ,MessageType.text);
-})
-}
+  })
+ }
 if (text.includes(".namajenis")){
 const teks = text.replace(/.namajenis /, "")
 axios.get(`https://api.terhambar.com/nama?jenis=${teks}`).then((res) => {
