@@ -2,7 +2,7 @@
 * "Jangan modal nama doang bro!!!"
 * (Scriptnya XP-TN&fiqking).
 */
-const BotName = '👾XP-TN👾'; // Nama Bot Whatsapp
+const XP-TN = '👾XP-TN👾'; // Nama Bot Whatsapp
 const instagramlu = 'https://instagram.com/mragung23'; // Nama Instagramlu cok
 const whatsapplu = 'https://Wa.me/+6289655478810'; // Nomor whatsapplu cok
 const kapanbotaktif = 'Tergantung jaringan'; // Kapan bot lu aktif
