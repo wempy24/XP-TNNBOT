@@ -1,6 +1,8 @@
 /*
 * "Jangan modal nama doang bro!!!"
 * (Scriptnya XP-TN&fiqking)
+* jangan ubah semuanya kecuali nama bot instagram yt itu ajah yg lain jangan!!!
+* hargai pembuat skrip woy!!!
 */
 const XPTN = '👾XP-TN👾'; // Nama Bot Whatsapp
 const instagram = 'https://instagram.com/mragung23'; // Nama Instagramlu cok
