@@ -331,7 +331,7 @@ axios.get(`https://api.haipbis.xyz/harinasional?tanggal=${teks}`).then((res) => 
   })
  }
   if (text.includes('.cooltext')){
-  var teks = text.replace(/%cooltext /, '')
+  var teks = text.replace(/.cooltext /, '')
     axios.get('https://api.haipbis.xyz/randomcooltext?text='+teks)
     .then((res) => {
       imageToBase64(res.data.image)
@@ -408,7 +408,7 @@ if (text.includes(".namajenis")){
 const teks = text.replace(/.namajenis /, "")
 axios.get(`https://api.terhambar.com/nama?jenis=${teks}`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-    let hasil = `Text Image Succes :) \n *namajenis* : _{res.data.nama}_ \n${res.data.result}`;
+    let hasil = `namajeniskalian\n nama : {res.data.nama}\n${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
