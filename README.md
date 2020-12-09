@@ -127,6 +127,8 @@ BOT INI KHUSUS HP/TERMUX DOANG YAH,JIKA MAU RE-UPLOAD CANTUMKAN NAMA SAYA (XP-TN
 * [`Youtube Admin`](https://www.youtube.com/channel/UCMiQsqzWvj-zKxNlFlG_Wiw)
 * [`Instagram Admin`](https://instagram.com/mragung23)
 * [`WhatsApp Admin `](https://wa.me/+6289655478810)
-##THANKS TO MY FRENDS
-* [`caliph71 Github`](https://github.com/Caliph71)
 
+##THANKS TO MY FRENDS
+```bash
+* [`caliph71 Github`](https://github.com/Caliph71)
+```
