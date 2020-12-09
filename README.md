@@ -129,6 +129,5 @@ BOT INI KHUSUS HP/TERMUX DOANG YAH,JIKA MAU RE-UPLOAD CANTUMKAN NAMA SAYA (XP-TN
 * [`WhatsApp Admin `](https://wa.me/+6289655478810)
 
 ##THANKS TO MY FRENDS
-```bash
 * [`caliph71 Github`](https://github.com/Caliph71)
-```
+
