@@ -1,6 +1,6 @@
 /*
 * "Jangan modal nama doang bro!!!"
-* (Scriptnya XP-TN&fiqking)
+* (Scriptnya XP-TN&fiqking&caliph71)
 * jangan ubah semuanya kecuali nama bot instagram yt itu ajah yg lain jangan!!!
 * hargai pembuat skrip woy!!!
 */
@@ -1670,13 +1670,24 @@ axios.get(`https://st4rz.herokuapp.com/api/yta2?url=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-if (text.includes(".nekopoi"))
+if (text.includes(".nekopoi")){
   { const teks = text.replace(/.nekopoi /, "") 
   axios.get(`https://mhankbarbar.herokuapp.com/api/nekopoi?url=${teks}&apiKey=N2Ws9kp3KTDYtry5Jjyz`).then((res) =>{ 
   let hasil = `➸ *nekopoi link tersedia* : ${res.data.judul}\n*result* : ${res.data.result}\n*dilihat* : ${res.data.dilihat}\n*tumbnail* : ${res.data.tumbnail}` 
   conn.sendMessage(id, hasil, MessageType.text); 
  })
  }
+if (text.includes('.memecreate')){
+  var teks = text.replace(/.memecreate /, '')
+    axios.get(`https://mnazria.herokuapp.com/api/create-meme?text-atas=${teks}`).then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
 if (text.includes(".ytmp4")){
 const teks = text.replace(/.ytmp4 /, "")
 axios.get(`https://st4rz.herokuapp.com/api/ytv2?url=${teks}`).then((res) => {
