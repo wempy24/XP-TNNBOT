@@ -1670,6 +1670,13 @@ axios.get(`https://st4rz.herokuapp.com/api/yta2?url=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".nekopoi"))
+  { const teks = text.replace(/.nekopoi /, "") 
+  axios.get(`https://mhankbarbar.herokuapp.com/api/nekopoi?url=${teks}&apiKey=N2Ws9kp3KTDYtry5Jjyz`).then((res) =>{ 
+  let hasil = `➸ *nekopoi link tersedia* : ${res.data.judul}\n*result* : ${res.data.result}\n*dilihat* : ${res.data.dilihat}\n*tumbnail* : ${res.data.tumbnail}` 
+  conn.sendMessage(id, hasil, MessageType.text); 
+ })
+ }
 if (text.includes(".ytmp4")){
 const teks = text.replace(/.ytmp4 /, "")
 axios.get(`https://st4rz.herokuapp.com/api/ytv2?url=${teks}`).then((res) => {
