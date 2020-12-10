@@ -131,5 +131,5 @@ BOT INI KHUSUS HP/TERMUX DOANG YAH,JIKA MAU RE-UPLOAD CANTUMKAN NAMA SAYA (XP-TN
 ##THANKS TO MY FRENDS
 * [`caliph71 Github`](https://github.com/Caliph71)
 <p align="center">
-<a href="#"><img title="👾information script vitur² Download apk for information skript👾" src="https://www.appcreator24.com/app1317131"</a>
+<a href="https://www.appcreator24.com/app1317131"</a>
 </p>
