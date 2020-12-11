@@ -323,6 +323,13 @@ axios.get(`https://api.haipbis.xyz/bitly?url=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".quotesanime")){
+const teks = text.replace(/.quotesanime /, "")
+axios.get(`https://animechanapi.xyz/api/quotes?anime=${teks}`).then((res) => {
+    let hasil = `quotesanime\n\n${res.data.quote} *character* \n${res.data.character} *anime* \n${res.data.anime}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes(".harinasional")){
 const teks = text.replace(/.harinasional /, "")
 axios.get(`https://api.haipbis.xyz/harinasional?tanggal=${teks}`).then((res) => {
