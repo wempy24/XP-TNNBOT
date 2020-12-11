@@ -337,7 +337,7 @@ axios.get(`https://api.haipbis.xyz/harinasional?tanggal=${teks}`).then((res) => 
     conn.sendMessage(id, hasil ,MessageType.text);
   })
  }
-  if (text.includes('.cooltext')){
+if (text.includes('.cooltext')){
   var teks = text.replace(/.cooltext /, '')
     axios.get('https://api.haipbis.xyz/randomcooltext?text='+teks)
     .then((res) => {
