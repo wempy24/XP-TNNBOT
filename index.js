@@ -1671,12 +1671,12 @@ axios.get(`https://st4rz.herokuapp.com/api/yta2?url=${teks}`).then((res) => {
 })
 }
 if (text.includes(".nekopoi")){
-  { const teks = text.replace(/.nekopoi /, "") 
-  axios.get(`https://mhankbarbar.herokuapp.com/api/nekopoi?url=${teks}&apiKey=N2Ws9kp3KTDYtry5Jjyz`).then((res) =>{ 
-  let hasil = `➸ *nekopoi link tersedia* : ${res.data.judul}\n*result* : ${res.data.result}\n*dilihat* : ${res.data.dilihat}\n*tumbnail* : ${res.data.tumbnail}` 
-  conn.sendMessage(id, hasil, MessageType.text); 
- })
- }
+const teks = text.replace(/.nekopoi /, "") 
+axios.get(`https://mhankbarbar.herokuapp.com/api/nekopoi?url=${teks}&apiKey=N2Ws9kp3KTDYtry5Jjyz`).then((res) =>{ 
+    let hasil = `➸ *nekopoi link tersedia* : ${res.data.judul}\n*result* : ${res.data.result}\n*dilihat* : ${res.data.dilihat}\n*tumbnail* : ${res.data.tumbnail}` 
+    conn.sendMessage(id, hasil, MessageType.text); 
+})
+}
 if (text.includes('.memecreate')){
   var teks = text.replace(/.memecreate /, '')
     axios.get(`https://mnazria.herokuapp.com/api/create-meme?text-atas=${teks}`).then((res) => {
