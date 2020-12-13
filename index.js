@@ -250,7 +250,7 @@ else if (text == '.tools5'){
 conn.sendMessage(id, ' *Menampilkan Fitur tools5!!!* ' ,MessageType.text);
 }
 else if (text == '.tools6'){
-conn.sendMessage(id, ' *Menampilkan Fitur tools5!!!* ' ,MessageType.text);
+conn.sendMessage(id, ' *Menampilkan Fitur tools6!!!* ' ,MessageType.text);
 }
 else if (text == 'Euy'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh .help' ,MessageType.text);
