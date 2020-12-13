@@ -29,6 +29,7 @@ const xp2 = require("./lib/xp2.js");
 const xp3 = require("./lib/xp3.js");
 const xp4 = require("./lib/xp4.js");
 const xp5 = require("./lib/xp5.js");
+const xp6 = require("./lib/xp6.js");
 const readTextInImage = require('./lib/ocr')
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
@@ -132,10 +133,10 @@ conn.sendMessage(id ,`${gg} ${exists ? " exists " : " does not exist"} on WhatsA
 
 //Chat XP-TN
 else if (text == 'assalamualaikum'){
-conn.sendMessage(id, '3aalaikumsalam, Ketik #help/#info/#donasi Contoh #help' ,MessageType.text);
+conn.sendMessage(id, '3aalaikumsalam, Ketik .help/.info/.donasi Contoh #help' ,MessageType.text);
 }
 else if (text == 'salam'){
-conn.sendMessage(id, 'Waalaikumsalam, Ketik #help/#info/#donasi Contoh #help' ,MessageType.text);
+conn.sendMessage(id, 'Waalaikumsalam, Ketik .help/.info/.donasi Contoh #help' ,MessageType.text);
 }
 else if (text == 'asalamualaikum'){
 conn.sendMessage(id, 'Waalaikumsalam, Ketik .help/.info/.donasi Contoh .help' ,MessageType.text);
@@ -248,6 +249,9 @@ conn.sendMessage(id, ' *Menampilkan Fitur tools4!!!* ' ,MessageType.text);
 else if (text == '.tools5'){
 conn.sendMessage(id, ' *Menampilkan Fitur tools5!!!* ' ,MessageType.text);
 }
+else if (text == '.tools6'){
+conn.sendMessage(id, ' *Menampilkan Fitur tools5!!!* ' ,MessageType.text);
+}
 else if (text == 'Euy'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh .help' ,MessageType.text);
 }
@@ -317,8 +321,8 @@ axios.get(`https://st4rz.herokuapp.com/api/yta?url=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-if (text.includes('!ping2')) {
-    conn.sendMessage(`from, ${processTime}( _Second_, MessageType.text`)
+if (text.includes('.ping2')) {
+    conn.sendMessage(`from, ${processTime}(_Second_, MessageType.text`)
 }
 if (text.includes('.texthunder')){
   var teks = text.replace(/.texthunder /, '')
@@ -375,7 +379,7 @@ var gh = text.split(".quotemaker ")[1];
         })
     })
 }
-if (text.includes('%nulis2')){
+if (text.includes('.nulis2')){
   var teks = text.replace(/%nulis2 /, '')
     axios.get(`https://mhankbarbars.herokuapp.com/nulis?text=${teks}&apiKey=N2Ws9kp3KTDYtry5Jjyz`).then((res) => {
       imageToBase64(res.data.result)
@@ -387,7 +391,7 @@ if (text.includes('%nulis2')){
         })
     })
 }
-if (text.includes('%ttp')){
+if (text.includes('.ttp2')){
   var teks = text.replace(/%ttp /, '')
     axios.get(`https://mhankbarbars.herokuapp.com/api/text2image?text=${teks}&apiKey=N2Ws9kp3KTDYtry5Jjyz`).then((res) => {
       imageToBase64(res.data.result)
@@ -1069,6 +1073,43 @@ var tampilTanggal = "TANGGAL: " + hari + ", " + tanggal + " " + bulan + " " + ta
 var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, xp5.xp5(id, XPTN, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwa, youtube) ,MessageType.text);
 }
+if (text == '.tools6'){
+const corohelp = await get.get('https://covid19.mathdro.id/api/countries/id').json()
+var date = new Date();
+var tahun = date.getFullYear();
+var bulan = date.getMonth();
+var tanggal = date.getDate();
+var hari = date.getDay();
+var jam = date.getHours();
+var menit = date.getMinutes();
+var detik = date.getSeconds();
+switch(hari) {
+ case 0: hari = "Minggu"; break;
+ case 1: hari = "Senin"; break;
+ case 2: hari = "Selasa"; break;
+ case 3: hari = "Rabu"; break;
+ case 4: hari = "Kamis"; break;
+ case 5: hari = "Jum'at"; break;
+ case 6: hari = "Sabtu"; break;
+}
+switch(bulan) {
+ case 0: bulan = "Januari"; break;
+ case 1: bulan = "Februari"; break;
+ case 2: bulan = "Maret"; break;
+ case 3: bulan = "April"; break;
+ case 4: bulan = "Mei"; break;
+ case 5: bulan = "Juni"; break;
+ case 6: bulan = "Juli"; break;
+ case 7: bulan = "Agustus"; break;
+ case 8: bulan = "September"; break;
+ case 9: bulan = "Oktober"; break;
+ case 10: bulan = "November"; break;
+ case 11: bulan = "Desember"; break;
+}
+var tampilTanggal = "TANGGAL: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
+var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
+conn.sendMessage(id, xp6.xp6(id, XPTN, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwa, youtube) ,MessageType.text);
+}
 else if (text == '.donate'){
 const corohelp = await get.get('https://covid19.mathdro.id/api/countries/id').json()
 var date = new Date();
@@ -1278,11 +1319,14 @@ conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* 
 else if (text == '.tools5'){
 conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
 }
+else if (text == '.tools6'){
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+}
    if (messageType == 'imageMessage')
    {
       let caption = imageMessage.caption.toLocaleLowerCase()
       const buffer = await conn.downloadMediaMessage(m) // to decrypt & use as a buffer
-      if (caption == '!sticker')
+      if (caption == '.sticker')
       {
          const stiker = await conn.downloadAndSaveMediaMessage(m) // to decrypt & save to file
 
