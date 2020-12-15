@@ -2199,34 +2199,6 @@ else if (text == '.hello1'){
 let hasil = fs.readFileSync('mp3/' + 'PTT' + '.wav')
  conn.sendMessage(id, hasil, MessageType.audio, { quoted: m } )
 }
-else if (text == '.hello2'){
-let hasil = fs.readFileSync('png/' + 'PTT' + '.png')
- conn.sendMessage(id, hasil, MessageType.sticker, { quoted: m } )
-}
-else if (text == '.help'){
-let hasil = fs.readFileSync('png/' + 'PT' + '.png')
- conn.sendMessage(id, hasil, MessageType.image, { quoted: m } )
-}
-if (text.includes("tolol")){
-let err = fs.readFileSync('png/' + 'tolol' + '.webp')
- conn.sendMessage(id, err, MessageType.sticker, { quoted: m })
-}
-if (text.includes("sad")){
-let err = fs.readFileSync('png/' + 'sad' + '.webp')
- conn.sendMessage(id, err, MessageType.sticker, { quoted: m })
-}
-if (text.includes("sepi")){
-let err = fs.readFileSync('png/' + 'sepi' + '.webp')
- conn.sendMessage(id, err, MessageType.sticker, { quoted: m })
-}
-if (text.includes("hacker")){
-let err = fs.readFileSync('png/' + 'hacker' + '.webp')
- conn.sendMessage(id, err, MessageType.sticker, { quoted: m })
-}
-if (text.includes("gorengan")){
-let err = fs.readFileSync('png/' + 'gorengan' + '.webp')
- conn.sendMessage(id, err, MessageType.sticker, { quoted: m })
-}
 if (text.includes("test")){
 let err = fs.readFileSync('mp3/' + 'test' + '.mav')
  conn.sendMessage(id, err, MessageType.audio, { quoted: m })
