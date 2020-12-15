@@ -43,6 +43,15 @@ Siapin alat dan bahannya.
 > kopi+rokok ;v
 ```
 
+##Full Tools Pribadi script😊
+Thanks To Xp-tn for share script🛡
+```bash
+>Jika error harap lapor ke owner pembuat skript
+> dan jika ada bug harap lapor ya😊
+> thanks for alfa chaliph xptn 
+```
+
+
 ### Informasi Pengguna
 Script ini di modifikasi sama saya sendiri XP-TN
 ```bash
