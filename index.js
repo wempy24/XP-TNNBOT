@@ -3,6 +3,8 @@
 * (Scriptnya XP-TN)
 * jangan ubah semuanya kecuali nama bot instagram yt itu ajah yg lain jangan!!!
 * hargai pembuat skrip woy!!!
+* reupload izin anjg gua gua cape buat nya!!
+* ini script pribadi gua!!
 */
 const XPTN = '👾XP-TN👾'; // Nama Bot Whatsapp
 const instagram = 'https://instagram.com/mragung23'; // Nama Instagramlu cok
