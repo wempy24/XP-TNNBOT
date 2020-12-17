@@ -763,13 +763,25 @@ if (text.includes(".infogempa")){
   conn.sendMessage(id, hasil, MessageType.text);
 })
 }
-if (text.includes(".fakta")){
-const teks = text.replace(/.fakta /, "")
-axios.get(`https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/faktaunix.txt${teks}`).then((res) => {
-    let hasil = `fakta tersedia\n👇👇👇👇👇👇👇👇👇\n\nJudul: ${res.data.title}\n\fakta Tersedia: ${res.data.filesize}\n\nLink: ${res.data.result}`;
-    conn.sendMessage(id, hasil ,MessageType.text);
-})
-}
+if (messageType === MessageType.text)
+   {
+      let is = m.message.conversation.toLocaleLowerCase()
+
+      if (is == '.fakta')
+      {
+
+         fetch('https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/faktaunix.txt')
+            .then(res => res.text())
+            .then(body =>
+            {
+               let tod = body.split("\n");
+               let pjr = tod[Math.floor(Math.random() * tod.length)];
+               let fakta = pjr.replace(/pjrx-line/g, "\n");
+               conn.sendMessage(id, fakta, MessageType.text, { quoted: m })
+            });
+      }
+
+   }
 if (text.includes(".katabijak")){
 const teks = text.replace(/.katabijak /, "")
 axios.get(`https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/katabijax.txt${teks}`).then((res) => {
